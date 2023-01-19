@@ -1,0 +1,103 @@
+{% load static %}
+<html>
+<head>
+<title>SIGN UP</title>
+
+<style>
+
+body
+{
+margin:0px;
+}
+
+.h
+{
+background-color:#a6ff4d;
+height:15%;
+width:100%;
+}
+
+.board
+{
+margin:20px;
+width:40%;
+height:550px;
+background-image:linear-gradient(#e6ffcc,#a6ff4d);
+border-radius:25px;
+box-shadow:5px 5px 15px #a6ff4d;
+}
+
+input[type=text],[type=password]
+{
+width:250px;
+height:30px;
+padding:0px 10px;
+border: 1px solid #a6ff4d;
+border-radius:5px;
+font-size:15px;
+margin-top:1%;
+}
+
+input[type=submit]
+{
+width:140px;
+height:30px;
+padding:0px 10px;
+border:0px;
+border-radius:5px;
+font-size:15px;
+color:green;
+background-color:yellow;
+opacity:.8;
+}
+
+input[type=submit]:hover
+{
+background-color:green;
+color:white;
+transition:0.15s;
+}
+
+</style>
+</head>
+
+<body bgcolor="#f2f2f2">
+
+<div class="h">
+</div>
+
+<center>
+<div class="board">
+<br><br>
+<div>
+</div>
+<form name="signup" action="" method="post">
+    {% csrf_token %}
+Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="name"><br><br>
+
+Email ID:&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="email"><br><br>
+
+Username:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="username"><br><br>
+
+Password:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp<input type="password" name="password1"><br><br>
+
+Confirm Password:&nbsp&nbsp<input type="password" name="password2"><br><br>
+
+Phone no:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="phno"><br><br><br><br>
+
+<input type="submit" value="Sign Up"><br><br>
+    Already have an account? <a href="{% url 'login' %}" >Login</a>
+</div>
+</form>
+
+</center>
+
+
+</body>
+</html>
+

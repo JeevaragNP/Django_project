@@ -1,0 +1,92 @@
+{% load static %}
+<html>
+<head>
+<title>LOG IN</title>
+
+<style>
+
+body
+{
+margin:0px;
+}
+
+.h
+{
+background-color:#a6ff4d;
+height:15%;
+width:100%;
+}
+
+.b
+{
+width:100%;
+position:relative;
+top:200px;
+font-size:15px;
+color:grey;
+}
+
+input[type=text],[type=password]
+{
+width:300px;
+height:35px;
+padding:0px 10px;
+border: 1px solid #a6ff4d;
+border-radius:5px;
+font-size:15px;
+}
+
+input[type=submit]
+{
+width:290px;
+height:30px;
+padding:0px 10px;
+border:0px;
+border-radius:5px;
+font-size:15px;
+color:green;
+background-color:yellow;
+opacity:.8;
+}
+
+input[type=submit]:hover
+{
+background-color:green;
+color:white;
+transition:0.15s;
+}
+
+a
+{
+text-decoration:none;
+color:green;
+}
+
+</style>
+
+</head>
+<body bgcolor="#f2f2f2">
+
+<div class="h">
+</div>
+
+<center>
+<br>
+<font style="font-size:5vh;position:relative;right:95px;color:#73e600;font-family:Apple Chancery,cursive"><i>Hey there!</i></font>
+<br><br>
+<form name="login" action="" method="post">
+    {% csrf_token %}
+<input type="text" style="margin-top:1%;" placeholder="Username" name="username"><br><br>
+<input type="password" placeholder="Password" name="password"><br><br><br>
+<input type="submit" value="Log In"><br><br>
+</form>
+Don't have an account?  <a href="{% url 'signup' %}">Sign up</a>
+
+<div class="b"><hr style="width:75%;background-color:green;border:0px;height:1px;"><br><br>
+
+</div>
+
+</center>
+
+</body>
+</html>
